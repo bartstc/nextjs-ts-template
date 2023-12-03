@@ -1,6 +1,24 @@
 {
-  "extends": ["next", "next/core-web-vitals", "plugin:@typescript-eslint/recommended", "prettier"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "prettier"
+  ],
   "plugins": ["react", "prettier", "react-hooks", "@typescript-eslint"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
+  },
   "rules": {
     "@typescript-eslint/no-explicit-any": [
       "warn",
@@ -16,7 +34,7 @@
       }
     ],
     "no-console": [
-      "warn",
+      "error",
       {
         "allow": ["warn", "error", "info"]
       }
