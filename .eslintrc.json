@@ -1,7 +1,28 @@
 {
-  "extends": ["next", "prettier", "next/core-web-vitals"],
-  "plugins": ["react", "react-hooks", "prettier"],
+  "extends": ["next", "next/core-web-vitals", "plugin:@typescript-eslint/recommended", "prettier"],
+  "plugins": ["react", "prettier", "react-hooks", "@typescript-eslint"],
   "rules": {
+    "@typescript-eslint/no-explicit-any": [
+      "warn",
+      {
+        "fixToUnknown": true,
+        "ignoreRestArgs": true
+      }
+    ],
+    "react/jsx-key": [
+      "warn",
+      {
+        "checkFragmentShorthand": true
+      }
+    ],
+    "no-console": [
+      "warn",
+      {
+        "allow": ["warn", "error", "info"]
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "no-unused-vars": [
@@ -13,7 +34,6 @@
         "vars": "all"
       }
     ],
-    "prefer-const": "error",
-    "react-hooks/exhaustive-deps": "error"
+    "prefer-const": "error"
   }
 }
