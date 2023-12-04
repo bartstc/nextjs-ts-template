@@ -6,9 +6,15 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    "prettier"
+    "prettier",
+    "plugin:storybook/recommended"
   ],
-  "plugins": ["react", "prettier", "react-hooks", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "prettier",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -36,13 +42,23 @@
     "no-console": [
       "error",
       {
-        "allow": ["warn", "error", "info"]
+        "allow": [
+          "warn",
+          "error",
+          "info"
+        ]
       }
     ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "quotes": ["error", "single"],
-    "semi": ["error", "always"],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
     "no-unused-vars": [
       "error",
       {
