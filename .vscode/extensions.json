@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "aaron-bond.better-comments",
+    "rodrigovallades.es7-react-js-snippets",
+    "PKief.material-icon-theme",
+    "ms-vscode-remote.vscode-remote-extensionpack",
+    "ms-vscode.remote-explorer",
+    "ms-vscode-remote.remote-ssh-edit"
+  ]
+}

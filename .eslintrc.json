@@ -9,20 +9,17 @@
     "prettier",
     "plugin:storybook/recommended"
   ],
-  "plugins": [
-    "react",
-    "prettier",
-    "react-hooks",
-    "@typescript-eslint"
-  ],
+  "plugins": ["react", "prettier", "react-hooks", "@typescript-eslint"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
-    }
+    },
+    "ecmaVersion": "latest",
+    "project": "./tsconfig.json"
   },
   "settings": {
     "react": {
-      "version": "latest"
+      "version": "detect"
     }
   },
   "rules": {
@@ -42,23 +39,13 @@
     "no-console": [
       "error",
       {
-        "allow": [
-          "warn",
-          "error",
-          "info"
-        ]
+        "allow": ["warn", "error", "info"]
       }
     ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "always"
-    ],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
     "no-unused-vars": [
       "error",
       {
@@ -66,6 +53,15 @@
         "caughtErrors": "none",
         "ignoreRestSiblings": true,
         "vars": "all"
+      }
+    ],
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": {
+          "arguments": false,
+          "attributes": false
+        }
       }
     ],
     "prefer-const": "error"
